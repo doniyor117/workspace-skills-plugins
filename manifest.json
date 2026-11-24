@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "default_targets": [
+    "~/.agents/skills",
+    "~/.claude/skills"
+  ],
+  "extra_targets": [
+    "~/.gemini/skills",
+    "~/.gemini/antigravity/skills",
+    "~/.codex/skills",
+    "~/.cursor/skills",
+    "~/.copilot/skills",
+    "~/.config/opencode/skills"
+  ],
+  "repos": [
+    {
+      "id": "matpockock-skills",
+      "url": "https://github.com/doniyor117/matpockock-skills.git",
+      "group": "core",
+      "mode": "glob",
+      "root": "skills",
+      "exclude_dirs": ["deprecated", "misc", "node_modules"],
+      "collision_prefix": "matpockock"
+    },
+    {
+      "id": "knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins.git",
+      "group": "core",
+      "mode": "glob",
+      "root": ".",
+      "exclude_dirs": ["partner-built", "node_modules"],
+      "collision_prefix": "anthropic"
+    },
+    {
+      "id": "knowledge-work-partner",
+      "url": "https://github.com/anthropics/knowledge-work-plugins.git",
+      "reuse_clone": "knowledge-work-plugins",
+      "group": "partner",
+      "mode": "glob",
+      "root": "partner-built",
+      "exclude_dirs": ["node_modules"],
+      "collision_prefix": "partner"
+    },
+    {
+      "id": "anthropic-skills",
+      "url": "https://github.com/anthropics/skills.git",
+      "group": "design",
+      "mode": "list",
+      "collision_prefix": "anthropic",
+      "paths": [
+        "skills/frontend-design",
+        "skills/canvas-design",
+        "skills/theme-factory",
+        "skills/web-artifacts-builder",
+        "skills/algorithmic-art"
+      ]
+    },
+    {
+      "id": "claude-plugins-official",
+      "url": "https://github.com/anthropics/claude-plugins-official.git",
+      "group": "design",
+      "mode": "list",
+      "collision_prefix": "anthropic",
+      "paths": [
+        "plugins/playground/skills/playground"
+      ]
+    },
+    {
+      "id": "stitch-skills",
+      "url": "https://github.com/google-labs-code/stitch-skills.git",
+      "group": "design",
+      "mode": "list",
+      "collision_prefix": "stitch",
+      "paths": [
+        "plugins/stitch-utilities/skills/taste-design",
+        "plugins/stitch-utilities/skills/design-md",
+        "plugins/stitch-utilities/skills/site-md",
+        "plugins/stitch-design/skills/extract-design-md",
+        "plugins/stitch-design/skills/manage-design-system",
+        "plugins/stitch-design/skills/code-to-design",
+        "plugins/stitch-design/skills/generate-design",
+        "plugins/stitch-build/skills/react-components",
+        "plugins/stitch-build/skills/react-vite-dashboard",
+        "plugins/stitch-build/skills/shadcn-ui",
+        "plugins/stitch-build/skills/remotion"
+      ]
+    },
+    {
+      "id": "openai-skills",
+      "url": "https://github.com/openai/skills.git",
+      "group": "design",
+      "mode": "list",
+      "collision_prefix": "openai",
+      "paths": [
+        "skills/.curated/figma",
+        "skills/.curated/figma-use",
+        "skills/.curated/figma-implement-design",
+        "skills/.curated/figma-create-design-system-rules",
+        "skills/.curated/figma-generate-design",
+        "skills/.curated/figma-generate-library",
+        "skills/.curated/figma-code-connect-components",
+        "skills/.system/imagegen"
+      ]
+    },
+    {
+      "id": "no-ai-slop",
+      "url": "https://github.com/doniyor117/no-ai-slop.git",
+      "group": "personal",
+      "mode": "list",
+      "collision_prefix": "doniyor",
+      "paths": [
+        "."
+      ]
+    },
+    {
+      "id": "writing-skill",
+      "url": "https://github.com/doniyor117/writing-skill.git",
+      "group": "personal",
+      "mode": "list",
+      "collision_prefix": "doniyor",
+      "paths": [
+        "."
+      ]
+    }
+  ]
+}
